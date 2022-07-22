@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import Header from "./components/Header";
+//import Header from "./components/Header";
+import HeaderLoggedIn from "./components/HeaderLoggedIn";
 import Promos from "./components/Promos";
 import Footer from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,7 +13,8 @@ import React  from 'react';
 function App() {
   return (
     <div className="App">
-        <Header/>
+        <HeaderLoggedIn/>
+        
         <div className="bg-light">
         <main>
         <Routes>

@@ -17,16 +17,18 @@ const Signup = () => {
           )
          .then(response => {
             setSignup(true)
-            console.log("success")
-            console.log(response)
-            console.log(signup)
-
+            document.getElementById("signupForm").reset();
+            console.log(response.data)
          })
          .catch(err => { 
-            console.log("failure") 
             setSignup(false)
-            setMessage(err.response.data.message)
-          console.log(err.response.data.message)
+            //console.log(JSON.stringify(err))
+            try{
+                setMessage(err.response.data.message)
+            }
+            catch {
+                setMessage("Erreur de connection au serveur")
+            }
         });
      };
 
@@ -37,13 +39,13 @@ const Signup = () => {
         <Card style={{"margin":"auto","margin-bottom":"20px","width":"35%",
                     "min-width":"400px","padding":"20px 50px 20px 50px "}}>
             <h3 className="text-center">Bienvenue à Discount Picker</h3>
-            {signup && <p className="text-center" style={{"color":"green"}}>
+            {signup && <p className="text-center" style={{"color":"green"}} variant="light">
                         Inscription réussite! <a href="login" style={{"text-decoration":"underline"}}>
                         Se connecter</a> </p>}
             {!signup && <p className="text-center" style={{"color":"red"}}>
                 {message} </p>}
             <br></br>
-            <Form onSubmit={handleSubmit(onSubmit)}>
+            <Form id="signupForm" onSubmit={handleSubmit(onSubmit)}>
                 <Container>
                 <Form.Group controlId="formName" >
                         <Row>
@@ -108,7 +110,7 @@ const Signup = () => {
                     &nbsp;
                     <label>J'accepte <a href="conditions" style={{"text-decoration":"underline"}}>
                         les conditions générales</a> d'utilisation.</label><br></br><br></br>
-                    <input type="checkbox" name="newsletter"/>
+                    <input type="checkbox" name="newsLetter"/>
                     &nbsp;
                     <label>J'aimerais reçevoir des notifications par email</label><br></br><br></br>
                     <Button variant="info" type="submit">S'inscrire</Button><br></br><br></br>
