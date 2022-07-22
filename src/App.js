@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-//import Header from "./components/Header";
+import Header from "./components/Header";
 import HeaderLoggedIn from "./components/HeaderLoggedIn";
 import Promos from "./components/Promos";
 import Footer from "./components/Footer";
@@ -11,10 +11,11 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import React  from 'react';
 function App() {
+  const token = localStorage.getItem('token')
   return (
     <div className="App">
-        <HeaderLoggedIn/>
-        
+        {token && <HeaderLoggedIn/>}
+        {!token && <Header/>}
         <div className="bg-light">
         <main>
         <Routes>

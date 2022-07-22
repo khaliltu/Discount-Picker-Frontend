@@ -39,15 +39,15 @@ const Signup = () => {
         <Card style={{"margin":"auto","margin-bottom":"20px","width":"35%",
                     "min-width":"400px","padding":"20px 50px 20px 50px "}}>
             <h3 className="text-center">Bienvenue à Discount Picker</h3>
-            {signup && <p className="text-center" style={{"color":"green"}} variant="light">
+            {signup && <p className="text-center alert alert-success">
                         Inscription réussite! <a href="login" style={{"text-decoration":"underline"}}>
                         Se connecter</a> </p>}
-            {!signup && <p className="text-center" style={{"color":"red"}}>
+            {!signup && message && <p className="text-center alert alert-warning">
                 {message} </p>}
             <br></br>
             <Form id="signupForm" onSubmit={handleSubmit(onSubmit)}>
                 <Container>
-                <Form.Group controlId="formName" >
+                <Form.Group>
                         <Row>
                             <Col>
                                 <Form.Label>Prénom</Form.Label>
@@ -58,7 +58,7 @@ const Signup = () => {
                             </Col>
                         </Row>
                     </Form.Group><br></br>
-                    <Form.Group controlId="formLastname" >
+                    <Form.Group>
                         <Row>
                             <Col>
                                 <Form.Label>Nom</Form.Label>
@@ -69,7 +69,7 @@ const Signup = () => {
                             </Col>
                         </Row>
                     </Form.Group><br></br>
-                    <Form.Group controlId="formVille" >
+                    <Form.Group>
                         <Row>
                             <Col>
                                 <Form.Label>Ville</Form.Label>
@@ -80,7 +80,7 @@ const Signup = () => {
                             </Col>
                         </Row>
                     </Form.Group><br></br>
-                    <Form.Group controlId="formEmail" >
+                    <Form.Group>
                         <Row>
                             <Col>
                                 <Form.Label>Email</Form.Label>
@@ -91,7 +91,7 @@ const Signup = () => {
                             </Col>
                         </Row>
                     </Form.Group><br></br>
-                    <Form.Group controlId="formPassword" >
+                    <Form.Group>
                         <Row>
                             <Col>
                                 <Form.Label>Mot de passe</Form.Label>

@@ -1,7 +1,13 @@
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import React  from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const HeaderLoggedIn = () => {
+    const navigate=useNavigate();
+    const logOut= () => {
+      localStorage.clear()
+      navigate('/')
+    }
     return ( 
         <div className="Header">
           <Navbar variant="light">
@@ -19,7 +25,7 @@ const HeaderLoggedIn = () => {
                   >
                     <NavDropdown.Item href="#profil">Profil</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#logOut">
+                    <NavDropdown.Item href="/" onClick={logOut}>
                       Se déconnecter
                     </NavDropdown.Item>
                   </NavDropdown>
