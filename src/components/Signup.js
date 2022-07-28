@@ -2,7 +2,7 @@ import {Form, Card, Container, Row, Col,Button} from "react-bootstrap";
 import React, { useState }  from 'react';
 import {useForm} from "react-hook-form";
 import axios from "axios";
-
+import './styles/Login_Signup.css'
 
 const Signup = () => {
     const { register, handleSubmit, formState: { errors }} = useForm();
@@ -35,14 +35,13 @@ const Signup = () => {
 
 
     return ( 
-    <div style={{"padding-top":"30px","padding-bottom":"20px"}}>
-        <Card style={{"margin":"auto","margin-bottom":"20px","width":"35%",
-                    "min-width":"400px","padding":"20px 50px 20px 50px "}}>
+    <div className="bodyPage">
+        <Card className="loginCard">
             <h3 className="text-center">Bienvenue à Discount Picker</h3>
-            {signup && <p className="text-center alert alert-success">
-                        Inscription réussite! <a href="login" style={{"text-decoration":"underline"}}>
+            {signup && <p className="text-center alert alert-success alertGreen">
+                        Inscription réussite! <a href="login">
                         Se connecter</a> </p>}
-            {!signup && message && <p className="text-center alert alert-warning">
+            {!signup && message && <p className="text-center alert alertRed alert-warning">
                 {message} </p>}
             <br></br>
             <Form id="signupForm" onSubmit={handleSubmit(onSubmit)}>
@@ -69,6 +68,19 @@ const Signup = () => {
                             </Col>
                         </Row>
                     </Form.Group><br></br>
+                    <Form.Group>
+                        <Row>
+                            <Col>
+                                <Form.Label>Genre</Form.Label>
+                            </Col>
+                            <Col>
+                                <Form.Select required {...register("sex")}>
+                                    <option value="male">homme</option>
+                                    <option value="female">femme</option>
+                                </Form.Select>
+                            </Col>
+                        </Row>
+                    </Form.Group> <br></br>
                     <Form.Group>
                         <Row>
                             <Col>
@@ -108,13 +120,10 @@ const Signup = () => {
                 <div className="text-center"><br></br>
                     <input type="checkbox" name="conditions" required/>
                     &nbsp;
-                    <label>J'accepte <a href="conditions" style={{"text-decoration":"underline"}}>
+                    <label>J'accepte <a href="conditions">
                         les conditions générales</a> d'utilisation.</label><br></br><br></br>
-                    <input type="checkbox" name="newsLetter"/>
-                    &nbsp;
-                    <label>J'aimerais reçevoir des notifications par email</label><br></br><br></br>
                     <Button variant="info" type="submit">S'inscrire</Button><br></br><br></br>
-                    <label>Vous avez un compte? <a href="login" style={{"text-decoration":"underline"}}>
+                    <label>Vous avez un compte? <a href="login">
                         Se connecter</a></label><br></br>
                 </div>
             </Form>

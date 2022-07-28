@@ -1,0 +1,19 @@
+.headerComp{
+    background-color: rgb(251,252,250);
+  }
+.headerLogo {
+    width: 40px;
+}
+.leftOption {
+    margin-left: auto;
+}
+.profileIcon {
+    border: black solid 1.6px;
+    border-radius: 10px;
+}
+.profileIcon:hover{
+    background-color: white;
+}
+#headerProfile {
+    color: black
+}

@@ -5,9 +5,10 @@ import {
   MDBContainer
 } from 'mdb-react-ui-kit';
 import { Col, Container, Row, Form, Button } from 'react-bootstrap';
+import './styles/Footer.css'
 export default function Footer() {
   return (
-    <MDBFooter className='text-center text-black' style={{"background-color":"#FAFAFA"}}>
+    <MDBFooter className='text-center text-black footerComp'>
       <MDBContainer className='p-4 pb-0'>
         <Container>
           <Row>
@@ -50,7 +51,7 @@ export default function Footer() {
                         S'abonner à la Newsletter
                       </h4>
                       <br></br>
-                      <Form.Control style={{"margin":"auto"}} className="w-75" type="email" placeholder="exemple@mail.com"/>
+                      <Form.Control className="ma w-75" type="email" placeholder="exemple@mail.com"/>
                       <br></br>
                     <Button variant="info" href="#">S'abonner</Button>
                 </Form.Group>
@@ -61,7 +62,7 @@ export default function Footer() {
           <br></br>
       </MDBContainer>
 
-      <div className='text-center p-3 xl' style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)'}}>
+      <div className='downFooter text-center p-3 xl'>
         © 2022 Copyrights: &nbsp;
         <a className='text-black' href='https://discountpicker.com/'>
           discountpicker.com

@@ -1,0 +1,14 @@
+.bodyPage {
+    padding-top :30px;
+    padding-bottom :20px
+}
+.cardElement {
+    margin : 0px 70px 25px 70px;
+}
+.cardImage {
+    height:400px;
+    margin:auto
+}
+.formButton {
+    max-width: 100%;
+}

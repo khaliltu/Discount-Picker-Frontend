@@ -1,0 +1,27 @@
+.bodyPage {
+    padding-top:30px;
+    padding-bottom:20px
+}
+.loginCard {
+    margin:auto;
+    margin-bottom:20px;
+    width:35%;
+    min-width:400px;
+    padding:20px 50px 20px 50px
+}
+.loginImg {
+    margin:auto;
+    width:200px;
+}
+.loginForm {
+    margin:10px 40px 10px 40px
+}
+.alertRed {
+    color : red;
+}
+.alertGreen{
+    color: green;
+}
+a {
+    text-decoration: underline;
+}
