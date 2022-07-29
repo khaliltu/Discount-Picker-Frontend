@@ -56,7 +56,10 @@ const Login = () => {
                     <input type="checkbox" id="inbrowser"/>
                     &nbsp;
                     <label>Se souvenir de moi</label><br></br><br></br>
-                    <Button type="submit" variant="info">Se connecter</Button><br></br><br></br>
+                    <Button type="submit" variant="info">Se connecter</Button>
+                    <br></br><br></br>
+                    <label>Vous n'avez pas de compte? &nbsp;<a href="signup">
+                        S'inscrire</a></label><br></br>
                 </div>
 
             </Form>

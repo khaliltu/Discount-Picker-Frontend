@@ -39,7 +39,7 @@ const HeaderLoggedIn = () => {
                 <NavDropdown id="headerProfile"
                     title={localStorage.getItem("userName").replace(/['"]+/g, '')}
                   >
-                    <NavDropdown.Item onClick={onProfile}>Profil</NavDropdown.Item>
+                    <NavDropdown.Item onClick={onProfile}>Gèrer Profil</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="/" onClick={logOut}>
                       Se déconnecter

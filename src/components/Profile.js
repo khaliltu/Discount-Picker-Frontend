@@ -11,6 +11,7 @@ const Profile = () => {
     const user = JSON.parse(localStorage.getItem("user"))
     const onSubmit = () => {
         localStorage.setItem("user",JSON.stringify(user))
+        console.log(user)
         axios
         .put('http://127.0.0.1:5000/api/v1/user',
         user,

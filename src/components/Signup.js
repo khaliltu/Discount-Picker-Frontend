@@ -18,11 +18,9 @@ const Signup = () => {
          .then(response => {
             setSignup(true)
             document.getElementById("signupForm").reset();
-            console.log(response.data)
          })
          .catch(err => { 
             setSignup(false)
-            //console.log(JSON.stringify(err))
             try{
                 setMessage(err.response.data.message)
             }
@@ -123,7 +121,7 @@ const Signup = () => {
                     <label>J'accepte <a href="conditions">
                         les conditions générales</a> d'utilisation.</label><br></br><br></br>
                     <Button variant="info" type="submit">S'inscrire</Button><br></br><br></br>
-                    <label>Vous avez un compte? <a href="login">
+                    <label>Vous avez un compte? &nbsp;<a href="login">
                         Se connecter</a></label><br></br>
                 </div>
             </Form>
