@@ -27,7 +27,7 @@ const HeaderLoggedIn = () => {
     return ( 
         <div className="headerComp">
           <Navbar variant="light">
-            <Container style={{"flex-flow": "row wrap"}}>
+            <Container style={{flexFlow: "row wrap"}}>
                 <Navbar.Brand href="/"><img alt="logo" className="headerLogo" src={process.env.PUBLIC_URL+"DP.png"}/>
                 &nbsp;Discount Picker</Navbar.Brand>
                 <Nav className="me-auto">

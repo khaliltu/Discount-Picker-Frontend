@@ -25,3 +25,6 @@
 a {
     text-decoration: underline;
 }
+Button {
+    min-width: 165px;
+}

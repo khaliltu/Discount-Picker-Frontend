@@ -1,11 +1,32 @@
-.profile {
-    display: flex;
-    flex-flow: row wrap;
-}
 .profileCard {
     margin:auto;
     margin-bottom:20px;
     width:35%;
     min-width:250px;
+}
+.cardBody {
     padding:20px 50px 20px 50px
+}
+.buttons {
+    width: 100%;
+}
+button {
+    background-color: white;
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid indianred;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+button:hover {
+    background-color: indianred;
+    color: white;
+    border-bottom: 1px solid indianred;
+}
+.vl {
+    border-left: 1px solid indianred;
+}
+Button {
+    min-width: 170px;
 }
