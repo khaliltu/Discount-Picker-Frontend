@@ -12,3 +12,9 @@
 .formButton {
     max-width: 100%;
 }
+.price {
+    color: green;
+}
+.old-price {
+    color: red;
+}

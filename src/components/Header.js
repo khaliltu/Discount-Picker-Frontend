@@ -6,16 +6,16 @@ const Header = () => {
         <div className="headerComp">
           <Navbar variant="light">
             <Container style={{flexFlow: "row wrap"}}>
-                <Navbar.Brand href="/"><img alt="logo" className="headerLogo" src={process.env.PUBLIC_URL+"DP.png"}/>
+                <Navbar.Brand href="http://localhost:3000/"><img alt="logo" className="headerLogo" src="https://i.ibb.co/G7M6z2T/DP.png"/>
                 &nbsp;Discount Picker</Navbar.Brand>
                 <Nav className="me-auto">
-                  <Nav.Link href="/" >Accueil</Nav.Link>
-                  <Nav.Link href="promos">Promos</Nav.Link>
-                  <Nav.Link href="about">A propos</Nav.Link>
+                  <Nav.Link href="http://localhost:3000/" >Accueil</Nav.Link>
+                  <Nav.Link href="http://localhost:3000/promos">Promos</Nav.Link>
+                  <Nav.Link href="http://localhost:3000/about">A propos</Nav.Link>
                 </Nav>
                 <div className="leftOption">
-                  <Button variant="info" href="login">Se connecter</Button>
-                  <Button variant="info" href="signup">S'inscrire</Button>
+                  <Button variant="info" href="http://localhost:3000/login">Se connecter</Button>
+                  <Button variant="info" href="http://localhost:3000/signup">S'inscrire</Button>
                 </div>
             </Container>
           </Navbar>

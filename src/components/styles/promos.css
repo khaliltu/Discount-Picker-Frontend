@@ -1,0 +1,47 @@
+Button {
+    margin: auto;
+    min-width: 170px;
+}
+.promoCard {
+    width:21%;
+    margin:20px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 3px 4px rgb(169, 167, 167);
+}
+.clickable {
+    color: black;
+    text-decoration: none;
+}
+.clickable:hover {
+    color: black;
+}
+.promoCard:hover {
+    transform: scale(1.08);
+}
+.promos {
+    margin-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.fournisseur {
+    padding: 4px 6px 4px 6px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    max-height: 32px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+img {
+    border-radius: 10px;
+    width: 100%;
+}

@@ -10,23 +10,26 @@
 .buttons {
     width: 100%;
 }
-button {
+button { 
     background-color: white;
+    height: 50px;
     width: 50%;
-    height: 40px;
     border: none;
-    border-bottom: 1px solid indianred;
+    border-bottom: 1px solid skyblue;
     padding-left: 0px;
     padding-right: 0px;
 }
+
 button:hover {
-    background-color: indianred;
+    background-color: skyblue;
     color: white;
-    border-bottom: 1px solid indianred;
+    border-bottom: 1px solid skyblue;
+}
+button:checked{
+    background-color: skyblue;
+    color: white;
+    border-bottom: 1px solid skyblue;
 }
 .vl {
-    border-left: 1px solid indianred;
-}
-Button {
-    min-width: 170px;
+    border-left: 1px solid skyblue;
 }

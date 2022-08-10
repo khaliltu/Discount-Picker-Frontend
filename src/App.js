@@ -11,6 +11,7 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import React from 'react';
 import Profile from "./components/Profile";
+import Products from "./components/Products";
 function App() {
   const token = localStorage.getItem("token")
   const navigate = useNavigate()
@@ -23,9 +24,11 @@ function App() {
           <main>
           <Routes>
             <Route path="/promos" exact element={<Promos/>}/>
+            <Route path="/product" exact element={<Promos/>}/>
+            <Route path="/product/:id" exact  element={<Products/>}/>
             <Route path="/about" exact element= {<About/>}/>
             <Route path="/profile" exact element= {<Profile/>}/>
-            <Route path="/*" element={<Home/>} />
+            <Route path="/"  element={<Home/>} />
           </Routes>
           </main>
           </div>
@@ -39,11 +42,13 @@ function App() {
         <div className="bg-light">
         <main>
         <Routes>
-          <Route path="/" exact element={<Home/>} />
           <Route path="/promos" exact element={<Promos/>}/>
+          <Route path="/product" exact element={<Promos/>}/>
+          <Route path="/product/:id" exact  element={<Products/>}/>
           <Route path="/about" exact element= {<About/>}/>
           <Route path="/signup" exact element= {<Signup/>}/>
           <Route path="/login" exact element= {<Login/>}/>
+          <Route path="/*" element={<Home/>} />
         </Routes>
         </main>
         </div>

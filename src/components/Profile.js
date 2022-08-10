@@ -77,8 +77,8 @@ const Profile = () => {
         {!security &&
         <Card className="profileCard">
             <div className="buttons">
-            <button style={{minWidth:"125px"}} onClick={updateViewG}>Général</button>
-            <button style={{minWidth:"125px"}} className="vl" onClick={updateViewS}>Sécurité</button>
+            <button onClick={updateViewG}>Général</button>
+            <button className="vl" onClick={updateViewS}>Sécurité</button>
             </div>
             <div className="cardBody">
             <br></br>
@@ -104,8 +104,8 @@ const Profile = () => {
         </Card>}
         {security && <Card className="profileCard">
             <div className="buttons">
-            <button onClick={updateViewG}>Général</button>
-            <button className="vl" onClick={updateViewS}>Sécurité</button>
+            <button style={{minWidth:"120px"}} onClick={updateViewG}>Général</button>
+            <button style={{minWidth:"120px"}} className="vl" onClick={updateViewS}>Sécurité</button>
             </div>
             <div className="cardBody">
             <br></br>
@@ -117,7 +117,7 @@ const Profile = () => {
                 <br></br>
                 <Form.Label>Nouveau mot de passe</Form.Label>
                 <Form.Control {...register("newPassword", {minLength: 5 }) }
-                    required type="password" placeholder="*****" onChange={updateValue}/>
+                    required type='password' placeholder="*****" onChange={updateValue}/>
                 <br></br>
                 <Form.Label>Confirmer le nouveau mot de passe</Form.Label>
                 <Form.Control {...register("newPasswordConfirm", {minLength: 5 }) }

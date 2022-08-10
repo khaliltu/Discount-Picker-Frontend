@@ -1,0 +1,56 @@
+.bodyPageProduct {
+    padding-top :30px;
+    padding-bottom :20px;
+    display: flex;
+}
+.cardElementProduct {
+   margin: auto;
+    padding-top: 10px;
+    width: 80%;
+    box-shadow: 2px 2px rgb(169, 167, 167);
+}
+.flexRow {
+    display: flex;
+    flex-flow: row wrap;
+}
+.website {
+    text-align: center;
+    color: #c94c4c;
+    border: 1px solid #c94c4c;
+    border-radius: 5px;
+    max-height: 32px;
+    margin: auto;
+    width: 200px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+.side {
+    width:25%;
+}
+.description {
+    margin: 10px 0px 0px 10px;
+}
+.achetez {
+    width: 220px;
+    margin: auto;
+}
+.infos {
+    width: 100%;
+    margin-left: 5px;
+    
+}
+.btn {
+    text-align: center;
+    background-color: rgb(222, 65, 65);
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.btn:hover {
+    color: white;
+    background-color: red;
+}
+.imgProduct {
+    width: 100%;
+    min-width: 300px;
+}
