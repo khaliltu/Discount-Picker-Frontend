@@ -43,13 +43,13 @@ const Products = () => {
                 <div>
                     <img className="imgProduct" src={product["Image Link"]} alt="produit"/>
                 </div>
-                <div >
+                <div className="text-center">
                     <div>
-                        <h4 className="website text-center">{product.website}</h4><br></br>
+                        <h4 style={{margin:"auto"}} className="website">{product.website}</h4><br></br>
                         <div className="infos">
                             <h4>{product.name}</h4><br></br>
-                            <b>{product.price} TND</b><br></br><br></br>
-                            <small><strike>{product["Initial Price"]} TND</strike></small><br></br><br></br>
+                            <b className="price">{product.price} TND</b><br></br><br></br>
+                            <small><strike className="old-price">{product["Initial Price"]} TND</strike></small><br></br><br></br>
                             {product["Discount Percentage"] && <small>Remise: {product["Discount Percentage"]} %</small>}
                             {product["Discount Amount"] && <small>Réduction: {product["Discount Amount"]} TND</small>}
                             <br></br>

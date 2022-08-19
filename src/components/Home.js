@@ -21,24 +21,28 @@ const Home = () => {
     return (  
         <div className="bodyPage">
             <Card className="cardElement">
+                    <div className="text-center">
+                        <h1 ><b>Discount Picker</b></h1>
+                    <Card.Text>Trouvez les meilleurs prix, promotions et ventes flash sur les sites e-commerce Tunisiens<br></br>
+                        Naviguez sur une seule plateforme &#38; Achetez partout
+                    </Card.Text></div>
                 <div style={{"display":"flex","flex-flow":"row wrap",justifyContent:"space-between"}}>
                         {products && products.map((product)=> ( 
-                            <a style={{"width":"20%","color":"black","margin-left":"15px",marginTop:"10px",marginRight:"15px","border":"2px solid black",
-                                    textDecoration:"none", padding:"10px",borderRadius:"10px"}} href={'/product/'+product._id.$oid}>
+                            <a key={product["Image Link"]} style={{"width":"20%",minWidth:"220px","color":"black","margin-left":"15px",marginTop:"10px",marginRight:"15px","border":"3px solid black",
+                                    textDecoration:"none", padding:"10px",borderRadius:"10px", boxShadow: "4px 4px rgb(210, 209, 211)"}} href={'/product/'+product._id.$oid}>
                                 <article>
-                                    <img style={{width:"200px"}} alt="product" src={product["Image Link"]}></img><br></br><hr></hr>
+                                    <img style={{width:"100%"}} alt="product" src={product["Image Link"]}></img><br></br><hr></hr>
                                     <small>{product.name}</small><br></br>
                                     <b className="price">{product.price}</b><br></br>
-                                    <strike className="old-price">{product["Initial Price"]}</strike>
+                                    <strike className="old-price">{product["Initial Price"]}</strike><br></br>
+                                    {product["Discount Percentage"] && <small>Remise: {product["Discount Percentage"]} %</small>}
+                                    {product["Discount Amount"] && <small>Réduction: {product["Discount Amount"]} TND</small>}
                                 </article>
                             </a>
                         ))}
                 </div>
                 <Card.Body className="text-center">
-                    <h2 >Discount Picker</h2>
-                    <Card.Text>Trouvez les meilleurs prix, promotions et ventes flash sur les sites e-commerce Tunisiens<br></br>
-                    Naviguez sur une seule plateforme &#38; Achetez partout</Card.Text>
-                    <Button variant="info" href="http://localhost:3000/promos" className="formButton">Consulter les promotions</Button>
+                    <Button variant="info" href="http://localhost:3000/promos" className="formButton">Consulter les promotions </Button>
                 </Card.Body>
             </Card>
             {!loggedIn && <Card className="cardElement">
@@ -47,15 +51,15 @@ const Home = () => {
                     
                     <div style={{"display":"flex","flex-flow":"row wrap","justifyContent":"space-between","margin-bottom":"20px"}}>
                         <a href="https://www.jumia.com.tn/" target="_blank" rel="noopener noreferrer">
-                            <img style={{"width":"300px","border":"2px solid black",padding:"10px",borderRadius:"10px"}}
+                            <img style={{"width":"300px","border":"1px solid black",padding:"10px",borderRadius:"10px"}}
                              alt="jumia" src="https://codepromos.ma/images/coupon/1616757694Jumia-logo.png"></img>
                         </a>
                         <a href="https://tunisiatech.tn/" target="_blank" rel="noopener noreferrer">
-                            <img style={{"width":"300px","border":"2px solid black",padding:"10px",borderRadius:"10px"}}
+                            <img style={{"width":"300px","border":"1px solid black",padding:"10px",borderRadius:"10px"}}
                             alt="tunisiatech" src="https://gde.webmanagercenter.com/wp-content/uploads/2019/02/tunisiatech-logo-gde.jpg"></img>
                         </a>
                         <a href="https://www.vongo.tn/" target="_blank" rel="noopener noreferrer">
-                            <img style={{"width":"300px","border":"2px solid black",padding:"10px",borderRadius:"10px"}} 
+                            <img style={{"width":"300px","border":"1px solid black",padding:"10px",borderRadius:"10px"}} 
                             alt="vongo" src="https://www.keejob.com/media/recruiter/recruiter_10049/logo-10049-20190403-163757.jpg"></img>
                         </a>
                     </div><br></br>

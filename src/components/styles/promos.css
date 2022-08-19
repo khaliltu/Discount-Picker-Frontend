@@ -8,7 +8,7 @@ Button {
     background-color: white;
     border-radius: 10px;
     position: relative;
-    box-shadow: 3px 4px rgb(169, 167, 167);
+    box-shadow: 4px 4px rgb(169, 167, 167);
 }
 .clickable {
     color: black;
@@ -44,4 +44,14 @@ Button {
 img {
     border-radius: 10px;
     width: 100%;
+}
+#website-name {
+    color: black;
+}
+.filterItem {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.filterItem > input{
+    border-radius: 5px;
 }

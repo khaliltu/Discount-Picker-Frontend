@@ -77,8 +77,8 @@ const Profile = () => {
         {!security &&
         <Card className="profileCard">
             <div className="buttons">
-            <button onClick={updateViewG}>Général</button>
-            <button className="vl" onClick={updateViewS}>Sécurité</button>
+            <button style={{minWidth:"120px"}} onClick={updateViewG}>Général</button>
+            <button style={{minWidth:"120px"}} className="vl" onClick={updateViewS}>Sécurité</button>
             </div>
             <div className="cardBody">
             <br></br>

@@ -19,10 +19,8 @@
     border: 1px solid #c94c4c;
     border-radius: 5px;
     max-height: 32px;
-    margin: auto;
     width: 200px;
     font-weight: bold;
-    margin-left: 40px;
 }
 .side {
     width:25%;
