@@ -55,3 +55,6 @@ img {
 .filterItem > input{
     border-radius: 5px;
 }
+select {
+    margin-bottom: 10px;
+}

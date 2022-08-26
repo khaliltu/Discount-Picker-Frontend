@@ -20,7 +20,7 @@ function App() {
     return (
       <div className="App">
           <HeaderLoggedIn/>
-          <div className="bg-light">
+          <div style={{backgroundColor:"whitesmoke"}}>
           <main>
           <Routes>
             <Route path="/promos" exact element={<Promos/>}/>
