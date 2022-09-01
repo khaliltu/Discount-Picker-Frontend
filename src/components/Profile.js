@@ -43,6 +43,7 @@ const Profile = () => {
             'token' : localStorage.getItem("token").replace(/['"]+/g, '')}}
             ).then( () => {
                 setUpdate(true)
+                localStorage.setItem("user",JSON.stringify(user))
             }).catch(err => {
                 setUpdate(false)
                 try{
