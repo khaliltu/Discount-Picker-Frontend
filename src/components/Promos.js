@@ -1,9 +1,9 @@
 import React, { useEffect, useState }  from 'react';
 import {FaSearch} from 'react-icons/fa'
 import { Card } from "react-bootstrap";
-import './styles/promos.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import "../styles/promos.css"
 const Promos = () => {
     const navigate = useNavigate()
     const [filter, setFilter]= useState(false)

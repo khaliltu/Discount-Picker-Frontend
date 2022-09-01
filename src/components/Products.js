@@ -2,9 +2,9 @@ import { useParams } from "react-router-dom";
 import React, { useState, useEffect }  from 'react';
 import axios from "axios";
 import {  Card } from "react-bootstrap";
-import "./styles/products.css";
 import { ScaleLoader } from "react-spinners";
 import { useNavigate } from "react-router-dom";
+import "../styles/products.css"
 const Products = () => {
     const [loading, setLoading] = useState(true)
     const [product, setProduct] = useState([]);

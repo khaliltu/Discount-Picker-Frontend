@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import React , {useState} from 'react';
 import axios from "axios";
-import './styles/Login_Signup.css'
+import "../styles/Login_Signup.css"
 const Login = () => {
     const { register, handleSubmit, formState: { errors }} = useForm();
     const navigate=useNavigate();

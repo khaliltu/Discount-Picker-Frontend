@@ -1,8 +1,8 @@
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import React  from 'react';
 import { useNavigate } from 'react-router-dom';
-import './styles/Header.css'
 import axios from "axios";
+import "../styles/Header.css"
 const HeaderLoggedIn = () => {
     const navigate=useNavigate();
     const logOut= () => {

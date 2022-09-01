@@ -5,7 +5,7 @@ import {
   MDBContainer
 } from 'mdb-react-ui-kit';
 import { Col, Container, Row, Form, Button } from 'react-bootstrap';
-import './styles/Footer.css'
+import "../styles/Footer.css"
 export default function Footer() {
   return (
     <MDBFooter className='text-center text-black footerComp'>

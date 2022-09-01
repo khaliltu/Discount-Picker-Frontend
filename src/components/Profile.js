@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Card, Form, Button } from "react-bootstrap";
-import './styles/Login_Signup.css';
-import './styles/profile.css';
 import {useForm} from "react-hook-form";
 import axios from 'axios';
+import "../styles/profile.css"
 const Profile = () => {
     const [confirmPassword, setConfirmPassword] = useState (true)
     const [security , setSecurity] = useState(false)

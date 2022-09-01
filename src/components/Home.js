@@ -1,7 +1,7 @@
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect }  from 'react';
-import './styles/Home.css';
 import axios from "axios";
+import "../styles/Home.css"
 const Home = () => {
     const loggedIn= localStorage.getItem('token')
     const [products, setProducts]= useState()
@@ -33,8 +33,8 @@ const Home = () => {
                                 <article>
                                     <img style={{width:"100%"}} alt="product" src={product["Image Link"]}></img><br></br><hr></hr>
                                     <small>{product.name}</small><br></br>
-                                    <b className="price">{product.price}</b><br></br>
-                                    <strike className="old-price">{product["Initial Price"]}</strike><br></br>
+                                    <b className="price">{product.price} TND</b><br></br>
+                                    <strike className="old-price">{product["Initial Price"]} TND</strike><br></br>
                                     {product["Discount Percentage"] && <small>Remise: {product["Discount Percentage"]} %</small>}
                                     {product["Discount Amount"] && <small>Réduction: {product["Discount Amount"]} TND</small>}
                                 </article>

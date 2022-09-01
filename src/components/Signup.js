@@ -2,8 +2,7 @@ import {Form, Card, Container, Row, Col,Button} from "react-bootstrap";
 import React, { useState }  from 'react';
 import {useForm} from "react-hook-form";
 import axios from "axios";
-import './styles/Login_Signup.css'
-
+import "../styles/Login_Signup.css"
 const Signup = () => {
     const { register, handleSubmit, formState: { errors }} = useForm();
     const [signup , setSignup] = useState()
